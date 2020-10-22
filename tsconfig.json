@@ -1,7 +1,10 @@
 {
   "compilerOptions": {
+    "module": "commonjs",
     "declaration": true,
-    "outDir": "./dist"
+    "alwaysStrict": true,
+    "outDir": "./dist",
+    "sourceMap": true,
   },
   "include": [
     "src/**/*"
