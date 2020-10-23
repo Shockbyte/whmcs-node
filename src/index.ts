@@ -3,6 +3,7 @@ import { WhmcsAddonsService } from "./module/addons";
 import { WhmcsAffiliatesService } from "./module/affiliates";
 import { WhmcsAuthenticationService } from "./module/authentication";
 import { WhmcsBillingService } from "./module/billing";
+import { WhmcsClientService } from "./module/client";
 import { WhmcsOrdersService } from "./module/orders";
 
 export default class WhmcsApi {
@@ -17,6 +18,7 @@ export default class WhmcsApi {
   public affiliates: WhmcsAffiliatesService = new WhmcsAffiliatesService;
   public authentication: WhmcsAuthenticationService = new WhmcsAuthenticationService;
   public billing: WhmcsBillingService = new WhmcsBillingService;
-  
+  public client: WhmcsClientService = new WhmcsClientService;
+
   public orders: WhmcsOrdersService = new WhmcsOrdersService;
 }
