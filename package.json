@@ -16,5 +16,8 @@
   "homepage": "https://gitlab.com/shockbyte/whmcs-node#readme",
   "dependencies": {
     "got": "^11.8.0"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.2"
   }
 }
