@@ -1,4 +1,4 @@
-import { UpdateClientAddonRequest, UpdateClientAddonResponse } from '../interface/updateclientaddon.options';
+import { UpdateClientAddonRequest, UpdateClientAddonResponse } from '../interface/addons/update-client-addon';
 import { Module } from './module';
 
 export class WhmcsAddonsService extends Module {
