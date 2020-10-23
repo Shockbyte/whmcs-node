@@ -25,5 +25,5 @@ export interface EmailPreference {
     domain?: boolean;
     invoice?: boolean;
     support?: boolean;
-    affiliate?: boolean
+    affiliate?: boolean;
 }
