@@ -11,17 +11,19 @@ export interface UpdateContactRequest {
     postcode?: string;
     country?: string;
     phonenumber?: string;
-    email_preferences?: {
-        general?: boolean;
-        product?: boolean;
-        domain?: boolean;
-        invoice?: boolean;
-        support?: boolean;
-        affiliate?: boolean
-    }[];
+    email_preferences?: EmailPreference[];
 }
 
 export interface UpdateContactResponse {
     result: string;
     contactid: number;
+}
+
+export interface EmailPreference {
+    general?: boolean;
+    product?: boolean;
+    domain?: boolean;
+    invoice?: boolean;
+    support?: boolean;
+    affiliate?: boolean
 }

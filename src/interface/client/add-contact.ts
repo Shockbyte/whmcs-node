@@ -12,17 +12,19 @@ export interface AddContactRequest {
     country?: string
     phonenumber?: string
     tax_id?: string
-    email_preferences: {
-        general?: boolean;
-        product?: boolean;
-        domain?: boolean;
-        invoice?: boolean;
-        support?: boolean;
-        affiliate?: boolean;
-    }[];
+    email_preferences: EmailPreference[];
 }
 
 export interface AddContactResponse {
     result: string;
     contactid: number;
+}
+
+export interface EmailPreference {
+    general?: boolean;
+    product?: boolean;
+    domain?: boolean;
+    invoice?: boolean;
+    support?: boolean;
+    affiliate?: boolean;
 }

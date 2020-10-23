@@ -8,5 +8,15 @@ export interface GetCancelledPackagesResponse {
     totalresults: number;
     startnumber: number;
     numreturned: number;
-    packages: [];
+    packages: Package[];
+}
+
+export interface Package {
+    id: number;
+    date: string;
+    relid: number;
+    reason: string;
+    type: string;
+    created_at: string;
+    updated_at: string;
 }

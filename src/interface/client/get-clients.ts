@@ -6,8 +6,20 @@ export interface GetClientsRequest {
 }
 
 export interface GetClientsResponse {
+    result: string;
     totalresults: number;
     startnumber: number;
     numreturned: number;
-    clients: [];
+    clients: Client[];
+}
+
+export interface Client {
+    id: number;
+    firstname: string;
+    lastname: string;
+    companyname: string;
+    email: string;
+    datecreated: string;
+    groupid: number;
+    status: string;
 }

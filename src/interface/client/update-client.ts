@@ -1,5 +1,5 @@
 export interface UpdateClientRequest {
-    clientid?: string;
+    clientid?: number;
     clientemail?: string;
     firstname?: string;
     lastname?: string;
@@ -21,14 +21,7 @@ export interface UpdateClientRequest {
     notes?: string;
     status?: string;
     paymentmethod?: string;
-    email_preferences: {
-        general?: boolean;
-        product?: boolean;
-        domain?: boolean;
-        invoice?: boolean;
-        support?: boolean;
-        affiliate?: boolean
-    }[];
+    email_preferences?: EmailPreference[];
     marketingoptin?: boolean;
     clearcreditcard?: boolean;
     skipvalidation?: boolean;
@@ -43,4 +36,13 @@ export interface UpdateClientRequest {
 export interface UpdateClientResponse {
     result: string;
     clientid: number;
+}
+
+export interface EmailPreference {
+    general?: boolean;
+    product?: boolean;
+    domain?: boolean;
+    invoice?: boolean;
+    support?: boolean;
+    affiliate?: boolean
 }
