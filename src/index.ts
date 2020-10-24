@@ -12,6 +12,7 @@ import { WhmcsProjectManagementService } from "./module/project-management";
 import { WhmcsServersService } from "./module/servers";
 import { WhmcsServiceService } from "./module/service";
 import { WhmcsSupportService } from "./module/support";
+import { WhmcsSystemService } from "./module/system";
 
 export default class WhmcsApi {
 
@@ -34,4 +35,5 @@ export default class WhmcsApi {
   public servers: WhmcsServersService = new WhmcsServersService;
   public service: WhmcsServiceService = new WhmcsServiceService;
   public support: WhmcsSupportService = new WhmcsSupportService;
+  public system: WhmcsSystemService = new WhmcsSystemService;
 }
