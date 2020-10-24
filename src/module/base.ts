@@ -4,7 +4,7 @@ import WhmcsApi from '..';
 export abstract class BaseModule {
 
   async request(methodName: string, options?: any): Promise<any> {
-    options.identifier = WhmcsApi.options.identifier // TODO get these from where the lib is constructed?
+    options.identifier = WhmcsApi.options.identifier;
     options.secret = WhmcsApi.options.secret;
     options.action = methodName;
     options.responsetype = 'json';

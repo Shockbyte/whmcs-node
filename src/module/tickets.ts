@@ -27,7 +27,7 @@ export class WhmcsTicketsService extends BaseModule {
     return this.request('GetTicketAttachment', options);
   }
   
-  public async getTicketCounts(options: GetTicketCountsRequest): Promise<GetTicketCountsResponse> {
+  public async getTicketCounts(options?: GetTicketCountsRequest): Promise<GetTicketCountsResponse> {
     return this.request('GetTicketCounts', options);
   }
   
