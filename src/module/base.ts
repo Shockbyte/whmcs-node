@@ -10,15 +10,15 @@ export abstract class BaseModule {
     options.responsetype = 'json';
 
     return new Promise(async (resolve, reject) => {
-        const res = await got(WhmcsApi.options.apiUrl, {
-            method: 'post',
-            form: options
-        });
-        
-        const data = JSON.parse(res.body);
+      const res = await got(WhmcsApi.options.apiUrl, {
+        method: 'post',
+        form: options
+      });
 
-        if (data.result != "success") return reject(data);
-        resolve(data);
+      const data = JSON.parse(res.body);
+
+      if (data.result != "success") return reject(data);
+      resolve(data);
     });
   }
 }
