@@ -11,7 +11,19 @@
     "url": "git+https://gitlab.com/shockbyte/whmcs-node.git"
   },
   "keywords": [],
-  "author": "James",
+  "author": "Shockbyte",
+  "contributors": [
+    {
+      "name": "James Hawkins",
+      "email": "jhawki2005@gmail.com",
+      "url": "https://github.com/jameshawkinss"
+    },
+    {
+      "name": "Niek van Gogh",
+      "email": "niek@shockbyte.com",
+      "url": "https://github.com/niekvangogh"
+    }    
+  ],
   "license": "ISC",
   "bugs": {
     "url": "https://gitlab.com/shockbyte/whmcs-node/issues"
