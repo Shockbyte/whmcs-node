@@ -1,0 +1,20 @@
+{
+  "name": "whmcs-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/shockbyte/whmcs-node.git"
+  },
+  "keywords": [],
+  "author": "James",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/shockbyte/whmcs-node/issues"
+  },
+  "homepage": "https://gitlab.com/shockbyte/whmcs-node#readme",
+  "dependencies": {
+    "got": "^11.8.0"
+  }
+}
