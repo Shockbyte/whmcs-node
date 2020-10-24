@@ -1,4 +1,4 @@
-import { Module } from "./module";
+import { BaseModule } from "./base";
 import { AddClientRequest, AddClientResponse } from "../interface/client/add-client";
 import { AddContactRequest, AddContactResponse } from "../interface/client/add-contact";
 import { CloseClientRequest, CloseClientResponse } from "../interface/client/close-client";
@@ -17,7 +17,7 @@ import { GetEmailsRequest, GetEmailsResponse } from "../interface/client/get-ema
 import { UpdateClientRequest, UpdateClientResponse } from "../interface/client/update-client";
 import { UpdateContactRequest, UpdateContactResponse } from "../interface/client/update-contact";
 
-export class WhmcsClientService extends Module {
+export class WhmcsClientService extends BaseModule {
   
   public async addClient(options: AddClientRequest): Promise<AddClientResponse> {
     return this.request('AddClient', options);

@@ -1,4 +1,4 @@
-import { Module } from "./module"
+import { BaseModule } from "./base"
 import { AcceptOrderRequest, AcceptOrderResponse } from "../interface/orders/accept-order"
 import { AddOrderRequest, AddOrderResponse } from "../interface/orders/add-order"
 import { CancelOrderRequest, CancelOrderResponse } from "../interface/orders/cancel-order"
@@ -11,7 +11,7 @@ import { GetPromotionsRequest, GetPromotionsResponse } from "../interface/orders
 import { OrderFraudCheckRequest, OrderFraudCheckResponse } from "../interface/orders/order-fraud-check"
 import { PendingOrderRequest, PendingOrderResponse } from "../interface/orders/pending-order"
 
-export class WhmcsOrdersService extends Module {
+export class WhmcsOrdersService extends BaseModule {
 
   public async acceptOrder(options: AcceptOrderRequest): Promise<AcceptOrderResponse> {
     return this.request('AcceptOrder', options)

@@ -1,7 +1,7 @@
-import { Module } from './module';
+import { BaseModule } from './base';
 import { UpdateClientAddonRequest, UpdateClientAddonResponse } from '../interface/addons/update-client-addon';
 
-export class WhmcsAddonsService extends Module {
+export class WhmcsAddonsService extends BaseModule {
 
     public async updateClientAddon(options: UpdateClientAddonRequest): Promise<UpdateClientAddonResponse> {
         return this.request('UpdateClientAddon', options);

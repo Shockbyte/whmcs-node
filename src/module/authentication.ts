@@ -1,4 +1,4 @@
-import { Module } from "./module";
+import { BaseModule } from "./base";
 import { CreateOAuthCredentialRequest, CreateOAuthCredentialResponse } from "../interface/authentication/create-o-auth-credential";
 import { CreateSsoTokenRequest, CreateSsoTokenResponse } from "../interface/authentication/create-sso-token";
 import { DeleteOAuthCredentialRequest, DeleteOAuthCredentialResponse } from "../interface/authentication/delete-o-auth-credential";
@@ -6,7 +6,7 @@ import { ListOAuthCredentialsRequest, ListOAuthCredentialsResponse } from "../in
 import { UpdateOAuthCredentialRequest, UpdateOAuthCredentialResponse } from "../interface/authentication/update-o-auth-credential";
 import { ValidateLoginRequest, ValidateLoginResponse } from "../interface/authentication/validate-login";
 
-export class WhmcsAuthenticationService extends Module {
+export class WhmcsAuthenticationService extends BaseModule {
 
   public async createOAuthCredential(options: CreateOAuthCredentialRequest): Promise<CreateOAuthCredentialResponse> {
     return this.request('CreateOAuthCredential', options);

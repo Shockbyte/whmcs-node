@@ -1,4 +1,4 @@
-import { Module } from "./module";
+import { BaseModule } from "./base";
 import { AcceptQuoteRequest, AcceptQuoteResponse } from "../interface/billing/accept-quote";
 import { AddBillableItemRequest, AddBillableItemResponse } from "../interface/billing/add-billable-item";
 import { AddCreditRequest, AddCreditResponse } from "../interface/billing/add-credit";
@@ -24,7 +24,7 @@ import { UpdatePayMethodRequest, UpdatePayMethodResponse } from "../interface/bi
 import { UpdateQuoteRequest, UpdateQuoteResponse } from "../interface/billing/update-quote";
 import { UpdateTransactionRequest, UpdateTransactionResponse } from "../interface/billing/update-transaction";
 
-export class WhmcsBillingService extends Module {
+export class WhmcsBillingService extends BaseModule {
 
   public async acceptQuote(options: AcceptQuoteRequest): Promise <AcceptQuoteResponse > {
     return this.request('AcceptQuote', options);
