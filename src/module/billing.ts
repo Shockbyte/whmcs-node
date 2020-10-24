@@ -26,7 +26,7 @@ import { UpdateTransactionRequest, UpdateTransactionResponse } from "../interfac
 
 export class WhmcsBillingService extends BaseModule {
 
-  public async acceptQuote(options: AcceptQuoteRequest): Promise <AcceptQuoteResponse > {
+  public async acceptQuote(options: AcceptQuoteRequest): Promise<AcceptQuoteResponse> {
     return this.request('AcceptQuote', options);
   }
 
@@ -101,7 +101,7 @@ export class WhmcsBillingService extends BaseModule {
   public async getTransactions(options: GetTransactionsRequest): Promise<GetTransactionsResponse> {
     return this.request('GetTransactions', options);
   }
-  
+
   public async sendQuote(options: SendQuoteRequest): Promise<SendQuoteResponse> {
     return this.request('SendQuote', options);
   }
