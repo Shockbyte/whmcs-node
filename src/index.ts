@@ -8,6 +8,8 @@ import { WhmcsDomainsService } from "./module/domains";
 import { WhmcsModuleService } from "./module/module";
 import { WhmcsOrdersService } from "./module/orders";
 import { WhmcsProductsService } from "./module/products";
+import { WhmcsProjectManagementService } from "./module/project-management";
+import { WhmcsServersService } from "./module/servers";
 
 export default class WhmcsApi {
 
@@ -26,4 +28,7 @@ export default class WhmcsApi {
   public module: WhmcsModuleService = new WhmcsModuleService;
   public orders: WhmcsOrdersService = new WhmcsOrdersService;
   public products: WhmcsProductsService = new WhmcsProductsService;
+  public projectmanagement: WhmcsProjectManagementService = new WhmcsProjectManagementService;
+  public servers: WhmcsServersService = new WhmcsServersService;
+
 }
