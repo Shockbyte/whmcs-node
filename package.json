@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://gitlab.com/shockbyte/whmcs-node.git"
+    "url": "git+https://github.com/shockbyte/whmcs-node.git"
   },
   "keywords": [],
   "author": "Shockbyte",
@@ -26,9 +26,9 @@
   ],
   "license": "ISC",
   "bugs": {
-    "url": "https://gitlab.com/shockbyte/whmcs-node/issues"
+    "url": "https://github.com/shockbyte/whmcs-node/issues"
   },
-  "homepage": "https://gitlab.com/shockbyte/whmcs-node#readme",
+  "homepage": "https://github.com/shockbyte/whmcs-node#readme",
   "dependencies": {
     "got": "^11.8.0"
   }
