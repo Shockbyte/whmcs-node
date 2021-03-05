@@ -8,7 +8,7 @@ export interface UpdateInvoiceRequest {
   date?: string;
   duedate?: string;
   datepaid?: string;
-  notes?: StorageManager;
+  notes?: string;
   itemdescription?: string[];
   itemamount?: number[];
   itemtaxed?: boolean[];
