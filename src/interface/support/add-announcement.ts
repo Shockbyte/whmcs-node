@@ -1,7 +1,7 @@
 export interface AddAnnouncementRequest {
   date: string;
   title: string;
-  announcement: SVGAnimatedString;
+  announcement: string;
   published?: boolean;
 }
 
