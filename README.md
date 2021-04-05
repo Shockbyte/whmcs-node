@@ -11,7 +11,7 @@ A Typescript/Javascript API wrapper for WHMCS.
 import 'WhmcsApi' from 'whmcs-node';
 
 // javascript
-const WhmcsApi = require('whmcs-node')
+const WhmcsApi = require('whmcs-node').default
 
 const whmcs = new WhmcsApi({
   identifier: "",
