@@ -1,5 +1,4 @@
 import got from 'got';
-import WhmcsApi from '..';
 import { WhmcsSetupOptions } from '../interface/whmcs.setup.options';
 
 export abstract class BaseModule {
@@ -13,15 +12,19 @@ export abstract class BaseModule {
     options.responsetype = 'json';
 
     return new Promise(async (resolve, reject) => {
-      const res = await got(this.options.apiUrl, {
-        method: 'post',
-        form: options
-      });
-
-      const data = JSON.parse(res.body);
-
-      if (data.result != "success") return reject(data);
-      resolve(data);
+      try {
+        const res = await got(this.options.apiUrl, {
+          method: 'post',
+          form: options
+        });
+  
+        const data = JSON.parse(res.body);
+  
+        if (data.result != "success") return reject(data);
+        resolve(data);
+      } catch (error) {
+        reject(error);
+      }
     });
   }
 }
