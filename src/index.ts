@@ -15,6 +15,7 @@ import { WhmcsSupportService } from "./module/support";
 import { WhmcsSystemService } from "./module/system";
 import { WhmcsTicketsService } from "./module/tickets";
 import { WhmcsUsersService } from "./module/users";
+import { WhmcsClientCustom } from "./module/custom";
 
 export default class WhmcsApi {
 
@@ -40,4 +41,5 @@ export default class WhmcsApi {
   public system: WhmcsSystemService = new WhmcsSystemService;
   public tickets: WhmcsTicketsService = new WhmcsTicketsService;
   public users: WhmcsUsersService = new WhmcsUsersService;
+  public custom: WhmcsClientCustom = new WhmcsClientCustom;
 }
