@@ -19,7 +19,7 @@ import { WhmcsClientCustom } from "./module/custom";
 
 export default class WhmcsApi {
 
-  constructor(private readonly options: WhmcsSetupOptions) { }
+  public static options: WhmcsSetupOptions;
 
   constructor(options: WhmcsSetupOptions) {
     WhmcsApi.options = options
