@@ -15,25 +15,31 @@ import { WhmcsSupportService } from "./module/support";
 import { WhmcsSystemService } from "./module/system";
 import { WhmcsTicketsService } from "./module/tickets";
 import { WhmcsUsersService } from "./module/users";
+import { WhmcsClientCustom } from "./module/custom";
 
 export default class WhmcsApi {
 
   constructor(private readonly options: WhmcsSetupOptions) { }
 
-  public addons: WhmcsAddonsService = new WhmcsAddonsService(this.options);
-  public affiliates: WhmcsAffiliatesService = new WhmcsAffiliatesService(this.options);
-  public authentication: WhmcsAuthenticationService = new WhmcsAuthenticationService(this.options);
-  public billing: WhmcsBillingService = new WhmcsBillingService(this.options);
-  public client: WhmcsClientService = new WhmcsClientService(this.options);
-  public domains: WhmcsDomainsService = new WhmcsDomainsService(this.options);
-  public module: WhmcsModuleService = new WhmcsModuleService(this.options);
-  public orders: WhmcsOrdersService = new WhmcsOrdersService(this.options);
-  public products: WhmcsProductsService = new WhmcsProductsService(this.options);
-  public projectmanagement: WhmcsProjectManagementService = new WhmcsProjectManagementService(this.options);
-  public servers: WhmcsServersService = new WhmcsServersService(this.options);
-  public service: WhmcsServiceService = new WhmcsServiceService(this.options);
-  public support: WhmcsSupportService = new WhmcsSupportService(this.options);
-  public system: WhmcsSystemService = new WhmcsSystemService(this.options);
-  public tickets: WhmcsTicketsService = new WhmcsTicketsService(this.options);
-  public users: WhmcsUsersService = new WhmcsUsersService(this.options);
+  constructor(options: WhmcsSetupOptions) {
+    WhmcsApi.options = options
+  }
+
+  public addons: WhmcsAddonsService = new WhmcsAddonsService;
+  public affiliates: WhmcsAffiliatesService = new WhmcsAffiliatesService;
+  public authentication: WhmcsAuthenticationService = new WhmcsAuthenticationService;
+  public billing: WhmcsBillingService = new WhmcsBillingService;
+  public client: WhmcsClientService = new WhmcsClientService;
+  public domains: WhmcsDomainsService = new WhmcsDomainsService;
+  public module: WhmcsModuleService = new WhmcsModuleService;
+  public orders: WhmcsOrdersService = new WhmcsOrdersService;
+  public products: WhmcsProductsService = new WhmcsProductsService;
+  public projectmanagement: WhmcsProjectManagementService = new WhmcsProjectManagementService;
+  public servers: WhmcsServersService = new WhmcsServersService;
+  public service: WhmcsServiceService = new WhmcsServiceService;
+  public support: WhmcsSupportService = new WhmcsSupportService;
+  public system: WhmcsSystemService = new WhmcsSystemService;
+  public tickets: WhmcsTicketsService = new WhmcsTicketsService;
+  public users: WhmcsUsersService = new WhmcsUsersService;
+  public custom: WhmcsClientCustom = new WhmcsClientCustom;
 }
